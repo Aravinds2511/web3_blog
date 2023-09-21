@@ -45,12 +45,12 @@ export default function myApp({ Component, pageProps }) {
     <div>
       <nav className={nav}>
         <div className={header}>
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a>
               <img src="/logo.svg" alt="React Logo" style={{ width: "50px" }} />
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a>
               <div className={titleContainer}>
                 <h2 className={title}>Full Stack</h2>
@@ -68,13 +68,13 @@ export default function myApp({ Component, pageProps }) {
           {account && <p className={accountInfo}>{account}</p>}
         </div>
         <div className={linkContainer}>
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a className={link}>Home</a>
           </Link>
           {
             //signed in owner is contract owner we show the link to create new post
             account === ownerAddress && (
-              <Link href="/create-post">
+              <Link href="/create-post" legacyBehavior>
                 <a className={link}>Create Post</a>
               </Link>
             )
