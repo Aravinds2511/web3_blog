@@ -106,7 +106,7 @@ export default function CreatePost() {
       />
       {loaded && (
         <>
-          <button className="{button}" type="button" onClick={createNewPost}>
+          <button className={button} type="button" onClick={createNewPost}>
             Publish
           </button>
           <button className={button} onClick={triggerOnChange}>
